@@ -4,6 +4,7 @@ import sqlite3
 import pickle
 import bz2
 import pandas as pd
+import os
 if not os.path.exists("model.pkl"):
     print("Model file not found. Running training script...")
     subprocess.run([sys.executable, "trainAll.py"])
