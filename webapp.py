@@ -4,6 +4,9 @@ import sqlite3
 import pickle
 import bz2
 import pandas as pd
+if not os.path.exists("model.pkl"):
+    print("Model file not found. Running training script...")
+    subprocess.run([sys.executable, "trainAll.py"])
 st.set_page_config(page_title="Crop Recommendation", page_icon="fevicon.png", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
 conn = sqlite3.connect('data.db')
